@@ -7,6 +7,8 @@ link.style.marginLeft = "10px";
 link.href = "index.html";
 link.innerHTML = "&#8617;";
 document.querySelector("#footer").appendChild(link);
+document.querySelector("#footer").style.height = "39px";
+document.querySelector("#content").style.backgroundColor = "black";
 
 function goBack(evt){    
   evt = evt || window.event;
