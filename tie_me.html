@@ -1,0 +1,393 @@
+<!--Save as html file-->
+<html>
+<head>
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+<title>flickgallery</title>
+<style>
+
+#header h1 {
+  padding:0;
+  margin:0;
+  line-height: 40px;
+}
+#header {
+  position:absolute;
+  left:0px;
+  right:0px;
+  top:0px;
+  height:40px;
+  background-color: black;
+  color:white;
+  text-align: center;
+  padding: 0px;
+  margin:0px;
+  border:0px;
+}
+
+a {
+  color:white;
+}
+
+#content {
+  position: absolute;
+  top:40px;
+  bottom:30px;
+  left:0px;
+  right:0px;
+  background-color: white;
+  text-align: center;
+  padding:0;
+  margin:0;
+}
+
+
+#content canvas {
+ top:0;
+ bottom:0;
+ left:0;
+ right:0;
+ padding: 0;
+ margin:0; 
+}
+#hackLink {
+  display: none;
+}
+
+#homelink {
+  display: none;
+  float: center;
+}
+#footer {
+  position:absolute;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  height:30px;
+  margin:0;
+  padding:0;
+  background-color: black;
+  color:white;
+  text-align: center;
+  padding: 0;
+  line-height: 30px;
+}
+</style>
+<script>
+
+<!--__EmbedBegin__-->
+var embeddedDat="%7B%22gameLink%22:%22%22,%22canvasses%22:%5B%5B1674,%22e%22,13,%22f%22,139,%22e%22,22,%22f%22,130,%22e%22,31,%22f%22,123,%22e%22,38,%22f%22,116,%22e%22,45,%22f%22,109,%22e%22,51,%22f%22,103,%22e%22,57,%22f%22,100,%22e%22,60,%22f%22,99,%22e%22,61,%22f%22,98,%22e%22,62,%22f%22,97,%22e%22,63,%22f%22,96,%22e%22,64,%22f%22,96,%22e%22,64,%22f%22,96,%22e%22,63,%22f%22,97,%22e%22,62,%22f%22,98,%22e%22,61,%22f%22,99,%22e%22,60,%22f%22,100,%22e%22,55,%22f%22,105,%22e%22,47,%22f%22,113,%22e%22,39,%22f%22,122,%22e%22,32,%22f%22,129,%22e%22,25,%22f%22,136,%22e%22,18,%22f%22,143,%22e%22,11,%22f%22,10678,%22e%22%5D,%5B1965,%22e%22,12,%22f%22,147,%22e%22,20,%22f%22,139,%22e%22,29,%22f%22,130,%22e%22,37,%22f%22,122,%22e%22,45,%22f%22,115,%22e%22,51,%22f%22,109,%22e%22,58,%22f%22,102,%22e%22,62,%22f%22,98,%22e%22,63,%22f%22,97,%22e%22,64,%22f%22,96,%22e%22,65,%22f%22,95,%22e%22,66,%22f%22,94,%22e%22,66,%22f%22,95,%22e%22,65,%22f%22,96,%22e%22,64,%22f%22,97,%22e%22,63,%22f%22,98,%22e%22,62,%22f%22,102,%22e%22,58,%22f%22,109,%22e%22,51,%22f%22,117,%22e%22,43,%22f%22,124,%22e%22,35,%22f%22,132,%22e%22,27,%22f%22,139,%22e%22,20,%22f%22,147,%22e%22,12,%22f%22,10297,%22e%22%5D,%5B2476,%22e%22,10,%22f%22,149,%22e%22,14,%22f%22,145,%22e%22,19,%22f%22,140,%22e%22,23,%22f%22,136,%22e%22,27,%22f%22,133,%22e%22,30,%22f%22,130,%22e%22,33,%22f%22,127,%22e%22,37,%22f%22,123,%22e%22,40,%22f%22,120,%22e%22,43,%22f%22,117,%22e%22,45,%22f%22,115,%22e%22,47,%22f%22,113,%22e%22,50,%22f%22,111,%22e%22,51,%22f%22,110,%22e%22,52,%22f%22,109,%22e%22,53,%22f%22,108,%22e%22,55,%22f%22,107,%22e%22,55,%22f%22,108,%22e%22,54,%22f%22,110,%22e%22,52,%22f%22,111,%22e%22,50,%22f%22,113,%22e%22,48,%22f%22,115,%22e%22,46,%22f%22,117,%22e%22,44,%22f%22,120,%22e%22,40,%22f%22,123,%22e%22,37,%22f%22,126,%22e%22,34,%22f%22,128,%22e%22,32,%22f%22,130,%22e%22,30,%22f%22,133,%22e%22,27,%22f%22,135,%22e%22,25,%22f%22,137,%22e%22,23,%22f%22,139,%22e%22,20,%22f%22,143,%22e%22,16,%22f%22,146,%22e%22,13,%22f%22,149,%22e%22,10,%22f%22,7863,%22e%22%5D,%5B5557,%22e%22,11,%22f%22,148,%22e%22,17,%22f%22,142,%22e%22,21,%22f%22,138,%22e%22,26,%22f%22,133,%22e%22,30,%22f%22,130,%22e%22,33,%22f%22,127,%22e%22,37,%22f%22,123,%22e%22,40,%22f%22,120,%22e%22,42,%22f%22,118,%22e%22,44,%22f%22,116,%22e%22,46,%22f%22,114,%22e%22,47,%22f%22,113,%22e%22,47,%22f%22,114,%22e%22,46,%22f%22,115,%22e%22,45,%22f%22,116,%22e%22,44,%22f%22,117,%22e%22,43,%22f%22,120,%22e%22,40,%22f%22,125,%22e%22,35,%22f%22,128,%22e%22,32,%22f%22,132,%22e%22,28,%22f%22,135,%22e%22,25,%22f%22,138,%22e%22,22,%22f%22,142,%22e%22,18,%22f%22,145,%22e%22,15,%22f%22,147,%22e%22,13,%22f%22,149,%22e%22,10,%22f%22,6241,%22e%22%5D,%5B8110,%22e%22,47,%22f%22,107,%22e%22,54,%22f%22,105,%22e%22,56,%22f%22,103,%22e%22,58,%22f%22,101,%22e%22,59,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,101,%22e%22,58,%22f%22,103,%22e%22,56,%22f%22,105,%22e%22,54,%22f%22,107,%22e%22,14,%22f%22,5162,%22e%22%5D,%5B8411,%22e%22,21,%22f%22,133,%22e%22,37,%22f%22,117,%22e%22,44,%22f%22,110,%22e%22,51,%22f%22,104,%22e%22,57,%22f%22,100,%22e%22,61,%22f%22,97,%22e%22,63,%22f%22,94,%22e%22,66,%22f%22,92,%22e%22,68,%22f%22,91,%22e%22,69,%22f%22,90,%22e%22,70,%22f%22,89,%22e%22,71,%22f%22,88,%22e%22,72,%22f%22,88,%22e%22,72,%22f%22,88,%22e%22,71,%22f%22,89,%22e%22,70,%22f%22,90,%22e%22,69,%22f%22,91,%22e%22,45,%22f%22,5,%22e%22,18,%22f%22,92,%22e%22,39,%22f%22,121,%22e%22,33,%22f%22,127,%22e%22,27,%22f%22,134,%22e%22,21,%22f%22,140,%22e%22,17,%22f%22,144,%22e%22,14,%22f%22,147,%22e%22,10,%22f%22,3772,%22e%22%5D,%5B9495,%22e%22,10,%22f%22,148,%22e%22,13,%22f%22,145,%22e%22,16,%22f%22,142,%22e%22,19,%22f%22,140,%22e%22,21,%22f%22,138,%22e%22,22,%22f%22,137,%22e%22,23,%22f%22,135,%22e%22,25,%22f%22,134,%22e%22,26,%22f%22,133,%22e%22,27,%22f%22,132,%22e%22,28,%22f%22,130,%22e%22,30,%22f%22,128,%22e%22,32,%22f%22,127,%22e%22,33,%22f%22,126,%22e%22,34,%22f%22,125,%22e%22,35,%22f%22,124,%22e%22,35,%22f%22,124,%22e%22,35,%22f%22,125,%22e%22,34,%22f%22,125,%22e%22,34,%22f%22,125,%22e%22,34,%22f%22,125,%22e%22,34,%22f%22,125,%22e%22,34,%22f%22,125,%22e%22,34,%22f%22,125,%22e%22,33,%22f%22,127,%22e%22,32,%22f%22,127,%22e%22,31,%22f%22,128,%22e%22,31,%22f%22,128,%22e%22,30,%22f%22,129,%22e%22,29,%22f%22,130,%22e%22,29,%22f%22,131,%22e%22,27,%22f%22,133,%22e%22,26,%22f%22,134,%22e%22,25,%22f%22,135,%22e%22,23,%22f%22,137,%22e%22,22,%22f%22,138,%22e%22,21,%22f%22,139,%22e%22,19,%22f%22,141,%22e%22,18,%22f%22,142,%22e%22,17,%22f%22,144,%22e%22,15,%22f%22,123,%22e%22%5D,%5B7063,%22e%22,10,%22f%22,149,%22e%22,12,%22f%22,147,%22e%22,14,%22f%22,145,%22e%22,16,%22f%22,143,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,141,%22e%22,19,%22f%22,141,%22e%22,19,%22f%22,141,%22e%22,19,%22f%22,141,%22e%22,19,%22f%22,141,%22e%22,19,%22f%22,141,%22e%22,19,%22f%22,141,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,142,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,16,%22f%22,144,%22e%22,16,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,16,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,144,%22e%22,15,%22f%22,146,%22e%22,13,%22f%22,148,%22e%22,11,%22f%22,130,%22e%22%5D,%5B7524,%22e%22,9,%22f%22,150,%22e%22,11,%22f%22,148,%22e%22,13,%22f%22,146,%22e%22,15,%22f%22,144,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,19,%22f%22,141,%22e%22,20,%22f%22,140,%22e%22,20,%22f%22,140,%22e%22,21,%22f%22,139,%22e%22,22,%22f%22,138,%22e%22,22,%22f%22,139,%22e%22,22,%22f%22,138,%22e%22,23,%22f%22,138,%22e%22,22,%22f%22,139,%22e%22,22,%22f%22,138,%22e%22,23,%22f%22,138,%22e%22,22,%22f%22,139,%22e%22,22,%22f%22,138,%22e%22,22,%22f%22,139,%22e%22,22,%22f%22,139,%22e%22,21,%22f%22,139,%22e%22,22,%22f%22,139,%22e%22,21,%22f%22,140,%22e%22,21,%22f%22,139,%22e%22,21,%22f%22,140,%22e%22,20,%22f%22,140,%22e%22,20,%22f%22,141,%22e%22,19,%22f%22,141,%22e%22,20,%22f%22,141,%22e%22,19,%22f%22,141,%22e%22,19,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,19,%22f%22,141,%22e%22,19,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,144,%22e%22,15,%22f%22,146,%22e%22,13,%22f%22,148,%22e%22,11,%22f%22,150,%22e%22,9,%22f%22,132,%22e%22%5D,%5B8483,%22e%22,9,%22f%22,150,%22e%22,11,%22f%22,148,%22e%22,13,%22f%22,146,%22e%22,15,%22f%22,145,%22e%22,16,%22f%22,144,%22e%22,16,%22f%22,144,%22e%22,16,%22f%22,144,%22e%22,16,%22f%22,144,%22e%22,17,%22f%22,143,%22e%22,17,%22f%22,143,%22e%22,18,%22f%22,142,%22e%22,18,%22f%22,142,%22e%22,19,%22f%22,141,%22e%22,19,%22f%22,141,%22e%22,20,%22f%22,140,%22e%22,21,%22f%22,139,%22e%22,21,%22f%22,139,%22e%22,22,%22f%22,139,%22e%22,22,%22f%22,138,%22e%22,23,%22f%22,138,%22e%22,22,%22f%22,138,%22e%22,23,%22f%22,138,%22e%22,23,%22f%22,138,%22e%22,23,%22f%22,137,%22e%22,24,%22f%22,137,%22e%22,25,%22f%22,136,%22e%22,26,%22f%22,135,%22e%22,27,%22f%22,133,%22e%22,29,%22f%22,132,%22e%22,30,%22f%22,131,%22e%22,31,%22f%22,129,%22e%22,32,%22f%22,129,%22e%22,32,%22f%22,129,%22e%22,32,%22f%22,129,%22e%22,32,%22f%22,129,%22e%22,31,%22f%22,130,%22e%22,30,%22f%22,131,%22e%22,29,%22f%22,132,%22e%22,28,%22f%22,134,%22e%22,26,%22f%22,135,%22e%22,25,%22f%22,136,%22e%22,24,%22f%22,138,%22e%22,22,%22f%22,140,%22e%22,19,%22f%22,143,%22e%22,16,%22f%22,146,%22e%22,13,%22f%22,148,%22e%22,11,%22f%22,120,%22e%22%5D,%5B11362,%22e%22,9,%22f%22,150,%22e%22,11,%22f%22,148,%22e%22,13,%22f%22,147,%22e%22,14,%22f%22,146,%22e%22,15,%22f%22,145,%22e%22,16,%22f%22,144,%22e%22,16,%22f%22,144,%22e%22,16,%22f%22,144,%22e%22,17,%22f%22,143,%22e%22,18,%22f%22,142,%22e%22,19,%22f%22,141,%22e%22,24,%22f%22,136,%22e%22,27,%22f%22,133,%22e%22,32,%22f%22,128,%22e%22,36,%22f%22,124,%22e%22,39,%22f%22,121,%22e%22,47,%22f%22,113,%22e%22,48,%22f%22,113,%22e%22,48,%22f%22,113,%22e%22,48,%22f%22,113,%22e%22,48,%22f%22,113,%22e%22,47,%22f%22,114,%22e%22,46,%22f%22,115,%22e%22,45,%22f%22,116,%22e%22,44,%22f%22,117,%22e%22,43,%22f%22,119,%22e%22,41,%22f%22,120,%22e%22,40,%22f%22,125,%22e%22,35,%22f%22,109,%22e%22%5D,%5B12,%22e%22,35,%22f%22,126,%22e%22,34,%22f%22,127,%22e%22,33,%22f%22,128,%22e%22,32,%22f%22,129,%22e%22,31,%22f%22,131,%22e%22,29,%22f%22,134,%22e%22,26,%22f%22,136,%22e%22,24,%22f%22,139,%22e%22,21,%22f%22,141,%22e%22,19,%22f%22,143,%22e%22,16,%22f%22,146,%22e%22,13,%22f%22,148,%22e%22,11,%22f%22,150,%22e%22,9,%22f%22,11797,%22e%22,1,%22f%22,159,%22e%22,3,%22f%22,157,%22e%22,5,%22f%22,155,%22e%22,7,%22f%22,153,%22e%22,9,%22f%22,151,%22e%22,11,%22f%22,149,%22e%22,13,%22f%22,147,%22e%22,15,%22f%22,145,%22e%22,17,%22f%22,143,%22e%22,20,%22f%22,140,%22e%22,22,%22f%22,138,%22e%22,26,%22f%22,134,%22e%22,29,%22f%22,131,%22e%22%5D,%5B8,%22e%22,58,%22f%22,102,%22e%22,59,%22f%22,101,%22e%22,60,%22f%22,101,%22e%22,59,%22f%22,102,%22e%22,58,%22f%22,103,%22e%22,57,%22f%22,105,%22e%22,55,%22f%22,110,%22e%22,50,%22f%22,124,%22e%22,36,%22f%22,133,%22e%22,27,%22f%22,138,%22e%22,22,%22f%22,141,%22e%22,18,%22f%22,148,%22e%22,11,%22f%22,13386,%22e%22,12,%22f%22,147,%22e%22,16,%22f%22,143,%22e%22,23,%22f%22,137,%22e%22,29,%22f%22,121,%22e%22%5D,%5B13,%22e%22,57,%22f%22,102,%22e%22,59,%22f%22,100,%22e%22,60,%22f%22,99,%22e%22,61,%22f%22,99,%22e%22,61,%22f%22,98,%22e%22,62,%22f%22,98,%22e%22,62,%22f%22,98,%22e%22,62,%22f%22,98,%22e%22,61,%22f%22,99,%22e%22,60,%22f%22,101,%22e%22,58,%22f%22,102,%22e%22,56,%22f%22,105,%22e%22,51,%22f%22,110,%22e%22,46,%22f%22,115,%22e%22,39,%22f%22,126,%22e%22,15,%22f%22,13567,%22e%22%5D,%5B15,%22e%22,54,%22f%22,105,%22e%22,56,%22f%22,103,%22e%22,58,%22f%22,101,%22e%22,59,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,60,%22f%22,100,%22e%22,59,%22f%22,101,%22e%22,58,%22f%22,103,%22e%22,56,%22f%22,105,%22e%22,54,%22f%22,107,%22e%22,44,%22f%22,117,%22e%22,10,%22f%22,13415,%22e%22%5D,%5B377,%22e%22,12,%22f%22,142,%22e%22,19,%22f%22,134,%22e%22,27,%22f%22,126,%22e%22,35,%22f%22,117,%22e%22,44,%22f%22,107,%22e%22,53,%22f%22,106,%22e%22,54,%22f%22,105,%22e%22,55,%22f%22,104,%22e%22,56,%22f%22,103,%22e%22,57,%22f%22,103,%22e%22,57,%22f%22,103,%22e%22,57,%22f%22,103,%22e%22,57,%22f%22,103,%22e%22,56,%22f%22,104,%22e%22,55,%22f%22,105,%22e%22,54,%22f%22,106,%22e%22,53,%22f%22,107,%22e%22,49,%22f%22,112,%22e%22,42,%22f%22,119,%22e%22,34,%22f%22,127,%22e%22,26,%22f%22,135,%22e%22,17,%22f%22,12283,%22e%22%5D%5D,%22hyperlinks%22:%5B%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%222%22,%222%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%223%22,%223%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%224%22,%224%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%225%22,%225%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%226%22,%226%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%227%22,%227%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%228%22,%228%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%229%22,%229%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%2210%22,%2210%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%2211%22,%2211%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%2212%22,%2212%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%2213%22,%2213%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%2214%22,%2214%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%2215%22,%2215%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%2216%22,%2216%22%5D,%5B0,0,0,0,0,0,0,0,0,0,0,0,0,0,%221%22,%221%22%5D%5D%7D";
+<!--__EmbedEnd__-->
+
+var zoom=1;
+var currentIndex=0;
+function redraw(){
+  console.log("resized "+window.innerWidth +"x"+window.innerHeight);  
+  mainCanvas.width=mainCanvasContainer.clientWidth;
+  mainCanvas.height=mainCanvasContainer.clientHeight;
+  mainCanvasCtx.width=mainCanvasContainer.clientWidth;
+  mainCanvasCtx.height=mainCanvasContainer.clientHeight;
+
+  if (images.length>0){
+
+    mainCanvasCtx.imageSmoothingEnabled = false;
+    mainCanvasCtx.mozImageSmoothingEnabled = false;
+    mainCanvasCtx.oImageSmoothingEnabled = false;
+    mainCanvasCtx.webkitImageSmoothingEnabled = false;
+    mainCanvasCtx.msImageSmoothingEnabled = false;
+
+    var w = mainCanvasCtx.width;
+    var h = mainCanvasCtx.height;
+    var wd = w/160.0;
+    var hd = h/100.0;
+    zoom=1;
+    if (wd<hd){
+      zoom=wd;//Math.floor(wd);
+    } else {
+      zoom=hd;//Math.floor(hd);
+    }
+    if(zoom<1){
+      zoom=1;
+    }
+    var dx=(w-160*zoom)/2;
+    var dy=(h-100*zoom)/2;
+    mainCanvasCtx.fillStyle="#000000";
+    mainCanvasCtx.fillRect(0,0,w,h);
+    mainCanvasCtx.drawImage(images[currentIndex],0,0,160,100,dx,dy,160*zoom,100*zoom);
+  } else {    
+    mainCanvasCtx.fillStyle="#ff0000";
+    mainCanvasCtx.fillRect(0,0,mainCanvas.width/2,mainCanvas.height/2);
+    mainCanvasCtx.fillStyle="#00ff00";
+    mainCanvasCtx.fillRect(mainCanvas.width/2,0,mainCanvas.width/2,mainCanvas.height/2);
+    mainCanvasCtx.fillStyle="#ff00ff";
+    mainCanvasCtx.fillRect(0,mainCanvas.height/2,mainCanvas.width/2,mainCanvas.height/2);
+    mainCanvasCtx.fillStyle="#00ffff";
+    mainCanvasCtx.fillRect(mainCanvas.width/2,mainCanvas.height/2,mainCanvas.width/2,mainCanvas.height/2);
+  }
+}
+
+
+  function getCoords(e) {
+    var x,y; 
+    if(e.offsetX) {
+        x = e.offsetX;
+        y = e.offsetY;
+    }
+    else if(e.layerX) {
+        x = e.layerX;
+        y = e.layerY;
+    }
+
+    return [x,y];
+  }
+
+  var target=0;
+
+  function mouseDown(e){
+    mouseMove(e);
+    if (target>0){
+      currentIndex=target-1;
+      redraw();
+      mouseMove(e);
+    } 
+  }
+  function mouseMove(e){
+
+    var coords = getCoords(e);
+
+    var w = mainCanvasCtx.width;
+    var h = mainCanvasCtx.height;
+    var wd = w/160.0;
+    var hd = h/100.0;
+    zoom=1;
+    if (wd<hd){
+      zoom=wd;//Math.floor(wd);
+    } else {
+      zoom=hd;//Math.floor(hd);
+    }
+    if(zoom<1){
+      zoom=1;
+    }
+    var dx=(w-160*zoom)/2;
+    var dy=(h-100*zoom)/2;
+
+    var x=Math.floor((coords[0]-dx)/zoom);
+    var y=Math.floor((coords[1]-dy)/zoom);
+    target=0;
+    if(x>=0&&x<160&&y>=0&&y<100) {
+      var ch = gameState.imageDats[currentIndex][x+160*y];
+      var colIndex = parseInt(ch,16);
+      target=gameState.hyperlinks[currentIndex][colIndex];
+
+      if (gameState.hyperlinks[currentIndex][colIndex]!=0) {
+        mainCanvas.style.cursor="pointer";        
+      } else {
+        mainCanvas.style.cursor="default";        
+      }
+
+    } else {
+      mainCanvas.style.cursor="default";
+    }
+    console.log(x+","+y+","+ch);
+
+  }
+
+var mainCanvas;
+var mainCanvasCtx;
+var mainCanvasContainer;
+function init(){
+  window.addEventListener('resize', redraw, false);
+
+
+  mainCanvas=document.getElementById("mainCanvas");
+  mainCanvasCtx=mainCanvas.getContext("2d");
+  mainCanvasContainer=document.getElementById("content");
+
+  mainCanvas.addEventListener('mousemove', mouseMove,false);
+  mainCanvas.addEventListener('mousedown', mouseDown,false);
+
+  redraw();
+
+  getData();
+
+}
+
+var aurl = document.createElement('a');
+function qualifyURL(url) {
+ aurl.href = url;
+ return aurl.href;
+}
+
+var gameState;
+function loadState(code){
+    gameState=JSON.parse(code);
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+
+function strip_http(url) {
+   url = url.replace(/^https?:\/\//,'');
+   return url;
+}
+
+function getData(){ 
+  if (embeddedDat[0]!=='_'){
+    embeddedDat=decodeURI(embeddedDat);
+    loadState(embeddedDat);
+
+    var homepage=gameState.gameLink;
+    var homepageLink = document.getElementById("homeLink");
+    homepageLink.innerHTML=strip_http(homepage);
+    if (!homepage.match(/^https?:\/\//)) {
+      homepage = "http://" + homepage;
+    }
+    homepageLink.href = homepage;
+
+    renderImages();
+    return;
+  }
+  var id = getParameterByName("p").replace(/[\\\/]/,"");
+  if (id===null||id.length===0) {
+    console.log("No ID specified in URL.")
+    return;
+  }
+
+  var githubURL = 'https://api.github.com/gists/'+id;
+
+  var githubHTTPClient = new XMLHttpRequest();
+  githubHTTPClient.open('GET', githubURL);
+  githubHTTPClient.onreadystatechange = function() {
+    if(githubHTTPClient.readyState!=4) {
+      return;
+    }   
+    var result = JSON.parse(githubHTTPClient.responseText);
+    if (githubHTTPClient.status===403) {
+      console.log(result.message);
+    } else if (githubHTTPClient.status!==200&&githubHTTPClient.status!==201) {
+      console.log("HTTP Error "+ githubHTTPClient.status + ' - ' + githubHTTPClient.statusText);
+    }
+    var result = JSON.parse(githubHTTPClient.responseText);
+    var code=result["files"]["game.txt"]["content"];
+    console.log(code);
+    loadState(code);
+
+    var homepage=gameState.gameLink;
+    var homepageLink = document.getElementById("homeLink");
+    homepageLink.innerHTML=strip_http(homepage);
+    if (!homepage.match(/^https?:\/\//)) {
+      homepage = "http://" + homepage;
+    }
+    homepageLink.href = homepage;
+  
+    var hacklink = document.getElementById("hackLink");
+
+    var url = "index.html?p="+id;
+    url=qualifyURL(url);
+    hacklink.href=url;
+    hacklink.innerHTML="&sdotb; edit";
+    renderImages();
+  }
+  githubHTTPClient.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  githubHTTPClient.send();
+}
+
+
+function RLE_decode(encoded) {
+    var output = "";
+    for (var i=0;i<encoded.length;i+=2) {
+      var count = encoded[i];
+      var ch = encoded[i+1];
+      for (var j=0;j<count;j++){
+        output+=ch;
+      }
+    }
+    return output;
+}
+
+ var colorPalette = [
+            "#140c1c",
+            "#442434",
+            "#30346d",
+            "#4e4a4e",
+            "#854c30",
+            "#346524",
+            "#d04648",
+            "#757161",
+            "#597dce",
+            "#d27d2c",
+            "#8595a1",
+            "#6daa2c",
+            "#d2aa99",
+            "#6dc2ca",
+            "#dad45e",
+            "#deeed6"
+            ];
+
+var images = new Array();
+var imageCtxts = new Array();
+function renderImages(){
+  gameState.imageDats = new Array();
+
+  for (var i=0;i<16;i++){
+    var canvas = document.createElement('canvas');
+    canvas.width="160";
+    canvas.height="100";
+    var ctx=canvas.getContext("2d");
+
+    var descriptionArray = gameState.canvasses[i];
+    var descriptionString = RLE_decode(descriptionArray);
+    for (var j=0;j<descriptionString.length;j++){
+      var x = j%160;
+      var y = Math.floor(j/160);
+      var ch=descriptionString[j];
+      var colIndex = parseInt(ch,16);
+      ctx.fillStyle=colorPalette[colIndex];
+      ctx.fillRect(x,y,1,1);
+    }
+    gameState.imageDats.push(descriptionString);
+    images.push(canvas);
+    imageCtxts.push(ctx);
+  }
+  redraw();
+}
+
+function goFullscreen(evt){    
+  evt = evt || window.event;
+ if (evt.keyCode===70) { //f
+    var elem = document.getElementById("mainCanvas");
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    }
+  }
+}
+document.addEventListener("keydown", goFullscreen);
+
+</script>
+</head>
+<body onload="init()" onkeydown="goFullscreen(event);">
+<div id="header">
+</div>
+<p>
+<div id="content">
+<canvas id="mainCanvas"></canvas>
+</div>
+<p>
+<div id="footer">
+ <a href="http://www.flickgame.org" id="hackLink"></a> <a  id="homeLink" href="http://www.flickgame.org"></a> 
+</div>
+<script src="gallerypage.js"></script>
+</body>
+</html>
